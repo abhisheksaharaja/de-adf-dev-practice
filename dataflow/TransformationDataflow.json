@@ -49,7 +49,7 @@
 				"source filter(STATUS=='Shipped') ~> filter",
 				"filter aggregate(groupBy(YEAR_ID,",
 				"          MONTH_ID),",
-				"     sales = sum(SALES)) ~> aggregate",
+				"     TOTALSALES = sum(SALES)) ~> aggregate",
 				"aggregate sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
